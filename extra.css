@@ -1,9 +1,8 @@
 /* ============================================================
    extra.css
-   Styles for the new revenue-generating sections:
-   Services & Fees, Document Shop, and the booking/payment box.
-   Loaded AFTER styles.css so it can't break anything already
-   working on the site — it only adds new, namespaced classes.
+   Styles for the Services & Fees, Document Shop, and
+   booking/payment sections. Loaded AFTER styles.css so it
+   can't break anything already working on the site.
    ============================================================ */
 
 .services-intro {
@@ -75,7 +74,6 @@
   max-width: 70ch;
 }
 
-/* Booking / payment box inside the Contact section */
 .booking-box {
   margin-top: 2.25rem;
   padding-top: 1.75rem;
