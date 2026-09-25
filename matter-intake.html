@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matter intake and legal enquiry qualification for Lungelo Mokoena Attorneys. Select a practice area and provide the information needed for an initial enquiry.">
+  <title>Matter Intake | Lungelo Mokoena Attorneys</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="matter-intake.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Lungelo Mokoena Attorneys home">
+        <span class="brand-mark">LM</span>
+        <span class="brand-text">
+          <strong>Lungelo Mokoena</strong>
+          <small>ATTORNEYS</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Practice Areas</a>
+        <a href="raf-checker.html">RAF Assessment</a>
+        <a href="raf-calculator.html">RAF Calculator</a>
+        <a href="raf-awards.html">RAF Research</a>
+        <a href="resources.html">Legal Resources</a>
+        <a href="faq.html">FAQs</a>
+        <a href="checklists.html">Checklists</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="consultation-fees.html">Consultation Fees</a>
+        <a href="fees.html">Fees &amp; Billing</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intake-hero">
+      <div class="container">
+        <div class="eyebrow">CLIENT INTAKE</div>
+        <h1>Tell us what legal help you need.</h1>
+        <p class="hero-lead">
+          Start with a few focused questions. Your answers help organise your initial enquiry
+          and identify the appropriate next step.
+        </p>
+        <div class="hero-notice">
+          <strong>Initial enquiry only.</strong>
+          Please do not include passwords, banking details, identity-document numbers,
+          medical records, or other highly sensitive documents at this stage.
+        </div>
+      </div>
+    </section>
+
+    <section class="intake-section">
+      <div class="container intake-grid">
+        <div class="intake-main">
+          <div class="progress-wrap" aria-label="Form progress">
+            <div class="progress-meta">
+              <span id="step-label">Step 1 of 4</span>
+              <span id="progress-percent">25%</span>
+            </div>
+            <div class="progress-track">
+              <div id="progress-bar" class="progress-bar" style="width:25%"></div>
+            </div>
+          </div>
+
+          <form id="matter-intake-form" novalidate>
+            <section class="intake-step active" data-step="1">
+              <div class="step-heading">
+                <span class="step-number">1</span>
+                <div>
+                  <h2>Choose your matter</h2>
+                  <p>Select the option that best describes your enquiry.</p>
+                </div>
+              </div>
+
+              <div class="matter-options">
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="RAF & Personal Injury" required>
+                  <span><strong>RAF &amp; Personal Injury</strong><small>Road accident, injury, loss or compensation enquiry.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Criminal Law">
+                  <span><strong>Criminal Law</strong><small>Arrest, bail, criminal charge, trial or related enquiry.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Labour & CCMA">
+                  <span><strong>Labour &amp; CCMA</strong><small>Dismissal, disciplinary issue, dispute or CCMA matter.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Wills & Estates">
+                  <span><strong>Wills &amp; Estates</strong><small>Will drafting, estate administration or related enquiry.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Property & Conveyancing">
+                  <span><strong>Property &amp; Conveyancing</strong><small>Property transfer or conveyancing enquiry.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Business & Contracts">
+                  <span><strong>Business &amp; Contracts</strong><small>Company, contract, lease, NDA or commercial enquiry.</small></span>
+                </label>
+                <label class="matter-option">
+                  <input type="radio" name="practiceArea" value="Other">
+                  <span><strong>Other / Not sure</strong><small>Describe your matter and the firm can consider the appropriate route.</small></span>
+                </label>
+              </div>
+              <p class="field-error" data-error-for="practiceArea"></p>
+            </section>
+
+            <section class="intake-step" data-step="2">
+              <div class="step-heading">
+                <span class="step-number">2</span>
+                <div>
+                  <h2>Tell us about the matter</h2>
+                  <p>Keep the description general. Do not upload or paste confidential documents here.</p>
+                </div>
+              </div>
+
+              <div id="conditional-fields" class="conditional-fields"></div>
+
+              <div class="field-group">
+                <label for="matterSummary">Brief description <span>*</span></label>
+                <textarea id="matterSummary" name="matterSummary" rows="6" maxlength="1500"
+                  placeholder="For example: what happened, what stage the matter is at, and what assistance you are looking for."></textarea>
+                <div class="field-meta"><span>Initial enquiry only</span><span id="summary-count">0 / 1500</span></div>
+                <p class="field-error" data-error-for="matterSummary"></p>
+              </div>
+            </section>
+
+            <section class="intake-step" data-step="3">
+              <div class="step-heading">
+                <span class="step-number">3</span>
+                <div>
+                  <h2>Contact details</h2>
+                  <p>Provide the details the firm can use to respond to your enquiry.</p>
+                </div>
+              </div>
+
+              <div class="form-two-col">
+                <div class="field-group">
+                  <label for="fullName">Full name <span>*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="100">
+                  <p class="field-error" data-error-for="fullName"></p>
+                </div>
+                <div class="field-group">
+                  <label for="phone">Phone / WhatsApp <span>*</span></label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+                  <p class="field-error" data-error-for="phone"></p>
+                </div>
+              </div>
+
+              <div class="form-two-col">
+                <div class="field-group">
+                  <label for="email">Email address</label>
+                  <input id="email" name="email" type="email" autocomplete="email" maxlength="120">
+                  <p class="field-error" data-error-for="email"></p>
+                </div>
+                <div class="field-group">
+                  <label for="preferredContact">Preferred contact</label>
+                  <select id="preferredContact" name="preferredContact">
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Phone call">Phone call</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-two-col">
+                <div class="field-group">
+                  <label for="urgency">Urgency</label>
+                  <select id="urgency" name="urgency">
+                    <option value="General enquiry">General enquiry</option>
+                    <option value="Time-sensitive">Time-sensitive</option>
+                    <option value="Urgent">Urgent — explain the deadline below</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="deadline">Important date / deadline</label>
+                  <input id="deadline" name="deadline" type="text" maxlength="100" placeholder="Optional">
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="checkbox-label">
+                  <input id="consent" name="consent" type="checkbox">
+                  <span>I understand that this is an initial enquiry and that submitting this form does not by itself create an attorney-client relationship. <span>*</span></span>
+                </label>
+                <p class="field-error" data-error-for="consent"></p>
+              </div>
+            </section>
+
+            <section class="intake-step" data-step="4">
+              <div class="step-heading">
+                <span class="step-number">4</span>
+                <div>
+                  <h2>Review your enquiry</h2>
+                  <p>Check the summary before choosing how to send it.</p>
+                </div>
+              </div>
+
+              <div id="review-summary" class="review-summary"></div>
+
+              <div class="submission-options">
+                <button type="button" id="whatsapp-submit" class="button button-primary">Send via WhatsApp</button>
+                <button type="button" id="email-submit" class="button button-secondary">Prepare Email</button>
+                <button type="button" id="copy-submit" class="button button-outline">Copy Enquiry</button>
+              </div>
+
+              <p id="submit-status" class="submit-status" role="status" aria-live="polite"></p>
+
+              <div class="after-submit-note">
+                <strong>Next step</strong>
+                <p>
+                  The firm can review the initial enquiry and determine the appropriate response.
+                  You can also review the <a href="consultation-fees.html">Consultation Fees</a> and
+                  <a href="fees.html">Fees &amp; Billing</a> pages before booking.
+                </p>
+              </div>
+            </section>
+
+            <div class="form-navigation">
+              <button type="button" id="back-button" class="button button-outline" hidden>Back</button>
+              <button type="button" id="next-button" class="button button-primary">Continue</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="intake-sidebar">
+          <div class="side-card">
+            <h3>What happens next?</h3>
+            <ol>
+              <li>Choose the practice area that best fits your matter.</li>
+              <li>Provide a short, non-confidential summary.</li>
+              <li>Submit your preferred contact details.</li>
+              <li>Use the generated enquiry to contact the firm.</li>
+            </ol>
+          </div>
+
+          <div class="side-card">
+            <h3>Before you submit</h3>
+            <ul>
+              <li>Do not send passwords or PINs.</li>
+              <li>Do not include full banking details.</li>
+              <li>Do not paste sensitive medical records.</li>
+              <li>Do not send confidential documents through this initial form.</li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Useful information</h3>
+            <a href="checklists.html">Document checklists</a>
+            <a href="faq.html">Frequently asked questions</a>
+            <a href="resources.html">Legal resources</a>
+            <a href="consultation.html">Request a consultation</a>
+            <a href="fees.html">Fees &amp; Billing</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Lungelo Mokoena Attorneys</h3>
+        <p>Law as a Lifestyle.</p>
+      </div>
+      <div>
+        <h4>Legal Tools</h4>
+        <a href="raf-checker.html">RAF Assessment</a>
+        <a href="raf-calculator.html">RAF Calculator</a>
+        <a href="raf-awards.html">RAF Research</a>
+        <a href="resources.html">Legal Resources</a>
+      </div>
+      <div>
+        <h4>Client Help</h4>
+        <a href="matter-intake.html">Matter Intake</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="consultation-fees.html">Consultation Fees</a>
+        <a href="fees.html">Fees &amp; Billing</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Lungelo Mokoena Attorneys. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-actions" aria-label="Quick actions">
+    <a href="consultation.html">Consultation</a>
+    <a href="matter-intake.html">Matter Intake</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="matter-intake.js"></script>
+</body>
+</html>
