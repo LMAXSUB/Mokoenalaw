@@ -1,0 +1,1 @@
+(function(){if(window.__mlaAILoaded)return;window.__mlaAILoaded=true;var c=document.createElement("link");c.rel="stylesheet";c.href="ai-assistant.css";document.head.appendChild(c);var s=document.createElement("script");s.src="ai-assistant.js";s.onload=function(){if(window.MokoenaLawAI)window.MokoenaLawAI.init()};document.body.appendChild(s)})();
