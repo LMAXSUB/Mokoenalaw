@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lmaxsub.github.io/Mokoenalaw/sitemap.xml
