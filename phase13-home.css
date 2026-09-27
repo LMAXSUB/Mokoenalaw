@@ -1,0 +1,30 @@
+/* Phase 13 — client conversion / start-path presentation */
+.start-path-grid {
+  margin-top: 6px;
+}
+.start-path-card {
+  min-height: 100%;
+}
+.start-path-card p {
+  line-height: 1.6;
+}
+.start-path-card a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.start-path-card a:hover {
+  text-decoration: underline;
+}
+.start-help-strip .callout {
+  text-align: center;
+}
+.start-help-strip .buttons {
+  justify-content: center;
+}
+@media (max-width: 650px) {
+  .start-help-strip .button {
+    width: 100%;
+  }
+}
